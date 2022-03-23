@@ -1,0 +1,16 @@
+Katinai
+katinas1
+300.0
+katinas2
+300.0
+katinas3
+300.0
+Vistos
+Vista1
+150.0
+Vista2
+150.0
+Vista3
+150.0
+Vista4
+150.0

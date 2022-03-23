@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxprojektas1.HelloController">
+   <children>
+      <Label alignment="CENTER" layoutX="198.0" layoutY="14.0" prefHeight="31.0" prefWidth="304.0" text="BŪSTO PASKOLOS SKAIČIUOKLĖ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <VBox layoutX="265.0" layoutY="68.0" prefHeight="275.0" prefWidth="274.0" spacing="5.0">
+         <children>
+            <TextField fx:id="PaskolosSumaLabel" />
+            <HBox prefHeight="26.0" prefWidth="170.0">
+               <children>
+                  <TextField fx:id="PaskolosTerminasMetaiLabel" promptText="Metai" />
+                  <TextField fx:id="PaskolosTerminasMenesiaiLabel" promptText="Mėnesiai" />
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="274.0">
+               <children>
+                  <RadioButton fx:id="RadioButtonLinijinis" mnemonicParsing="false" onAction="#display" prefHeight="33.0" prefWidth="138.0" text="Linijinis">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grafikas" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="RadioButtonAnuiteto" mnemonicParsing="false" onAction="#display2" prefHeight="34.0" prefWidth="67.0" text="Anuiteto" toggleGroup="$grafikas" />
+               </children>
+            </HBox>
+            <TextField fx:id="MetinisProcentasLabel" layoutX="10.0" layoutY="10.0" />
+            <Button fx:id="countButton" mnemonicParsing="false" onAction="#StoreTheInformation" prefHeight="64.0" prefWidth="274.0" text="Skaičiuoti">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="56.0" layoutY="68.0" prefHeight="200.0" prefWidth="122.0" spacing="5.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="100.0" text="Paskolos suma:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+            <Label layoutX="10.0" layoutY="34.0" prefHeight="24.0" prefWidth="100.0" text="Paskolos terminas:" />
+            <Label layoutX="10.0" layoutY="34.0" prefHeight="24.0" prefWidth="119.0" text="Grąžinimo grafikas:" />
+            <Label layoutX="10.0" layoutY="58.0" prefHeight="24.0" prefWidth="100.0" text="Metinis procentas:" />
+         </children>
+      </VBox>
+      <Label fx:id="welcomeText" layoutX="322.0" layoutY="354.0" prefHeight="78.0" prefWidth="192.0" text="Label" />
+      <LineChart fx:id="lineChart" layoutX="580.0" layoutY="6.0">
+        <xAxis>
+          <NumberAxis label = "Menesiai" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label = "Mėnesio įmoka" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="grafikoButton" layoutX="804.0" layoutY="420.0" mnemonicParsing="false" onAction="#doTheGraph" text="Graph" />
+   </children>
+</AnchorPane>
