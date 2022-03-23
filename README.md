@@ -14,4 +14,5 @@ and it is a properly working software to count the mortgages of both annuity and
 
 And it is a monthly payment systems for groups of people, which allows you to add new groups, new payers, add new payments, 
 edit them for both groups and individual people for individual months.
+
 //When adding new students you've gotta press refresh button
